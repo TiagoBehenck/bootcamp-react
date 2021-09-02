@@ -1,5 +1,22 @@
+import { 
+  Header,
+  Menu,
+  Sidebar,
+  Main,
+  Footer,
+} from './components'
+import './style.css'
+
 export function App() {
   return (
-    <h1>App</h1>
+  <div className='wrapper'>
+    <Header />
+    <Menu />
+    <div className='content'>
+      <Sidebar />
+      <Main />
+    </div>
+    <Footer />
+  </div>
   );
 }
