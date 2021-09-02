@@ -31,7 +31,7 @@ aside {
   justify-content: center;
   align-items: center;
   height: 13vh;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   margin: 0.5rem 0;
 }
 
@@ -48,12 +48,16 @@ footer {
 }
 
 aside {
+  display: flex;
+  flex-direction: column;
   width: 20vw;
   height: 60vh;
   border: 1px solid var(--highlight);
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 80vw;
   height: 60vh;
   border: 1px solid var(--highlight);
@@ -64,6 +68,40 @@ button {
   font: 400 1rem "Inter", sans-serif;
 }
 
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  padding: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 1rem;
+  padding: 1rem;
+}
+
 button {
   cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  width: 10rem;
+  margin: 0.5rem;
+}
+
+.primary {
+  background-color: var(--highlight);
+}
+
+.secondary {
+  background-color: transparent;
+  border: 1px solid var(--highlight);
+  color: var(--heading);
 }
