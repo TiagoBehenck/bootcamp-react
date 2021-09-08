@@ -5,6 +5,7 @@ import {
   Sidebar,
   Main,
   Footer,
+  H2,
 } from './components'
 import './style.css'
 
@@ -12,22 +13,22 @@ const teams = [
   { 
     id: 1,
     title: 'Atlético-MG',
-    content: '<p>A. Stival</p>',
+    content: <H2>A. Stival</H2>,
   },
   { 
     id: 2,
     title: 'Palmeiras',
-    content: '<p>Abel Fernando</p>',
+    content: <H2>Abel Fernando</H2>,
   },
   { 
     id: 3,
     title: 'Fortaleza',
-    content: '<p>Juan Pablo Vojvoda</p>',
+    content: <H2>Juan Pablo Vojvoda</H2>,
   },
   { 
     id: 4,
     title: 'Bragantino',
-    content: '<p>Maurício Nogueira Barbieri</p>',
+    content: <H2>Maurício Nogueira Barbieri</H2>,
   },
 
 ]
@@ -46,7 +47,11 @@ export function App() {
     <Header />
     <Menu />
     <div className='content'>
-      <Sidebar data={teams} />
+      <Sidebar 
+        data={teams}
+        onChangeTitle={setTitle}
+        onChangeContent={setContent}
+      />
       <Main 
         title={title}
         content={content}
