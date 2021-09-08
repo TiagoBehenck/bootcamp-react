@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { 
   Header,
   Menu,
@@ -32,13 +33,24 @@ const teams = [
 ]
 
 export function App() {
+  const [title, setTitle] = useState()
+  const [content, setContent] = useState()
+
+  useEffect(() => { 
+    setTitle(teams[0].title)
+    setContent(teams[0].content)
+  }, [])
+
   return (
   <div className='wrapper'>
     <Header />
     <Menu />
     <div className='content'>
       <Sidebar data={teams} />
-      <Main />
+      <Main 
+        title={title}
+        content={content}
+      />
     </div>
     <Footer />
   </div>
