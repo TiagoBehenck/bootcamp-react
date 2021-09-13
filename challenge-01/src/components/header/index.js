@@ -1,3 +1,5 @@
+import * as S from './styles'
+
 export function Header() { 
-  return <header>Header</header>
+  return <S.Header>Header</S.Header>
 }

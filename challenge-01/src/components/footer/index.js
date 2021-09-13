@@ -1,3 +1,5 @@
+import * as S from './styles'
+
 export function Footer() { 
-  return <footer>Footer</footer>
+  return <S.Footer>Footer</S.Footer>
 }

@@ -1,3 +1,5 @@
+import * as S from './styles'
+
 export function Button({kind, children}) { 
-  return <button className={kind}>{children}</button>
+  return <S.Button className={kind}>{children}</S.Button>
 }

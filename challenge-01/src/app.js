@@ -5,18 +5,21 @@ import {
   Main,
   Footer,
 } from './components'
-import './style.css'
+import { GlobalStyle } from './style';
 
 export function App() {
   return (
-  <div className='wrapper'>
-    <Header />
-    <Menu />
-    <div className='content'>
-      <Sidebar />
-      <Main />
+  <>
+    <GlobalStyle />
+    <div className='wrapper'>
+      <Header />
+      <Menu />
+      <div className='content'>
+        <Sidebar />
+        <Main />
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  </>
   );
 }
