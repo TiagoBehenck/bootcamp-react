@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { URL } from '../../service'
 
-import './styles.css';
+import * as S from './styles'
 
 export function Form({ updateTable }) { 
   const [data, setData] = useState({
@@ -43,8 +43,8 @@ export function Form({ updateTable }) {
   }
 
   return ( 
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="image">Imagem</label>
+    <S.Form onSubmit={handleSubmit}>
+      <S.Label htmlFor="image">Imagem</S.Label>
       <input 
         type="text"
         name="image"
@@ -54,7 +54,7 @@ export function Form({ updateTable }) {
         value={data.image}
       />
 
-      <label htmlFor="brandModel">Marca/Modelo</label>
+      <S.Label htmlFor="brandModel">Marca/Modelo</S.Label>
       <input 
         type="text"
         name="brandModel"
@@ -65,7 +65,7 @@ export function Form({ updateTable }) {
         value={data.brandModel}
       />
 
-      <label htmlFor="plate">Placa</label>
+      <S.Label htmlFor="plate">Placa</S.Label>
       <input 
         type="text"
         name="plate"
@@ -77,7 +77,7 @@ export function Form({ updateTable }) {
         value={data.plate}
       />
 
-      <label htmlFor="year">Ano</label>
+      <S.Label htmlFor="year">Ano</S.Label>
       <input 
         name="year"
         id="year"
@@ -87,7 +87,7 @@ export function Form({ updateTable }) {
         value={data.year}
       />
 
-      <label htmlFor="color">Cor</label>
+      <S.Label htmlFor="color">Cor</S.Label>
       <input
        type="color"
        id="color"
@@ -97,9 +97,9 @@ export function Form({ updateTable }) {
        value={data.color}
       />
 
-      <button type='submit'>
+      <S.Button type='submit'>
         Enviar
-      </button>
-    </form>
+      </S.Button>
+    </S.Form>
   )
 }
